@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addCar"
+        android:title="@string/addCar"
+        android:icon="@drawable/ic_car" />
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home" />
+    <item
+        android:id="@+id/tankUp"
+        android:title="@string/tankUp"
+        android:icon="@drawable/ic_gas_station"/>
+</menu>
