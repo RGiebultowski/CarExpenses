@@ -10,4 +10,9 @@
     <string name="capacity">Pojemność w litrach</string>
     <string name="fuel">Rodzaj paliwa</string>
     <string name="add">Dodaj</string>
+    <string-array name="fuel_array">
+        <item>Benzyna</item>
+        <item>Diesel</item>
+        <item>Benzyna + Gaz</item>
+    </string-array>
 </resources>
