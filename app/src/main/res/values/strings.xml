@@ -1,8 +1,13 @@
 <resources>
-    <string name="app_name">WydatkiSamochodowe</string>
+    <string name="app_name">Notatnik Tankowania</string>
     <string name="addCar">Dodaj pojazd</string>
     <string name="home">Home</string>
     <string name="tankUp">Zatankuj</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="brand">Marka</string>
+    <string name="model">Model</string>
+    <string name="capacity">Pojemność w litrach</string>
+    <string name="fuel">Rodzaj paliwa</string>
+    <string name="add">Dodaj</string>
 </resources>

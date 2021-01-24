@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.wydatkisamochodowe.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -54,5 +57,27 @@ public class MainActivity extends AppCompatActivity {
         return fragment;
     }
 
+    private static int backButtonCount = 0;
 
+    @Override
+    public void onBackPressed() {
+        new CountDownTimer(4000, 1000){
+            public void onTick(long millisUntilFinished){
+                backButtonCount = 1;
+            }
+            public void onFinish(){
+                backButtonCount = 0;
+            }
+        }.start();
+        if (backButtonCount >= 1){
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        else {
+            Toast.makeText(this, "Wciśnij jescze raz aby zamknąć aplikację.", Toast.LENGTH_LONG).show();
+            backButtonCount++;
+        }
+    }
 }
